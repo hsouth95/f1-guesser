@@ -1,5 +1,5 @@
-import { Track, TrackFileName, TrackName } from "@/types/tracks";
-import trackData from "../../tracks.new.json";
+import { Track } from "@/types/tracks";
+import trackData from "../../tracks.json";
 import { useMemo, useState } from "react";
 
 export const useTracks = () => {
@@ -31,6 +31,10 @@ export const useTracks = () => {
     );
   };
 
+  const getTrackByName = (trackName: string): Track => {
+    return Object.values(trackData).find((track) => track.name === trackName)!;
+  };
+
   const resetTracks = () => {
     setRemainingTracks(Object.values(trackData) as Track[]);
   };
@@ -40,5 +44,6 @@ export const useTracks = () => {
     getAllTrackNames,
     removeTrack,
     resetTracks,
+    getTrackByName,
   };
 };

@@ -3,132 +3,154 @@
     "name": "Abu Dhabi",
     "country": "UAE",
     "trackName": "Yas Marina Circuit",
-    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Yas-Marina-Circuit--768x432.png"
+    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Yas-Marina-Circuit--768x432.png",
+    "emoji": "🇦🇪"
   },
   "bahrain": {
     "name": "Bahrain",
     "country": "Bahrain",
     "trackName": "Bahrain Internation Circuit",
-    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Bahrain-circuit-768x432.png"
+    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Bahrain-circuit-768x432.png",
+    "emoji": "🇧🇭"
   },
   "jeddah": {
     "name": "Jeddah",
     "country": "Saudi Arabia",
     "trackName": "Jeddah Corniche Circuit",
-    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Jeddah-Corniche-Circuit-768x432.png"
+    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Jeddah-Corniche-Circuit-768x432.png",
+    "emoji": "🇸🇦"
   },
   "australia": {
     "name": "Australia",
     "country": "Australia",
     "trackName": "Albert Park Circuit",
-    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Albert-Park-Circuit-768x432.png"
+    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Albert-Park-Circuit-768x432.png",
+    "emoji": "🇦🇺"
   },
   "baku": {
     "name": "Baku",
     "country": "Azerbaijan",
     "trackName": "Baku City Circuit",
-    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Baku-City-Circuit-768x432.png"
+    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Baku-City-Circuit-768x432.png",
+    "emoji": "🇦🇿"
   },
   "miami": {
     "name": "Miami",
     "country": "USA",
     "trackName": "Miami International Autodrome",
-    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Miami-International-Autodrome-768x432.png"
+    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Miami-International-Autodrome-768x432.png",
+    "emoji": "🇺🇸"
   },
   "imola": {
     "name": "Imola",
     "country": "Italy",
     "trackName": "Imola Circuit",
-    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Circuit-de-Monaco--768x432.png"
+    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Circuit-de-Monaco--768x432.png",
+    "emoji": "🇮🇹"
   },
   "monaco": {
     "name": "Monaco",
     "country": "Monaco",
     "trackName": "Circuit de Monaco",
-    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Circuit-de-Monaco--768x432.png"
+    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Circuit-de-Monaco--768x432.png",
+    "emoji": "🇲🇨"
   },
   "barcelona": {
     "name": "Barcelona",
     "country": "Italy",
     "trackName": "Circuit de Barcelona-Catalunya",
-    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Circuit-de-Barcelona-Catalunya-768x432.png"
+    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Circuit-de-Barcelona-Catalunya-768x432.png",
+    "emoji": "🇪🇸"
   },
   "canada": {
     "name": "Canada",
     "country": "Canada",
     "trackName": "Circuit Gilles Villeneuve",
-    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Circuit-Gilles-Villeneuve-768x432.png"
+    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Circuit-Gilles-Villeneuve-768x432.png",
+    "emoji": "🇨🇦"
   },
   "redbull": {
     "name": "Red Bull Ring",
     "country": "Austria",
     "trackName": "Red Bull Ring",
-    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Red-Bull-Ring-768x432.png"
+    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Red-Bull-Ring-768x432.png",
+    "emoji": "🇦🇹"
   },
   "silverstone": {
     "name": "Silverstone",
     "country": "England",
     "trackName": "Silverstone Circuit",
-    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Silverstone-Circuit--768x432.png"
+    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Silverstone-Circuit--768x432.png",
+    "emoji": "🇬🇧"
   },
   "hungary": {
     "name": "Hungary",
     "country": "Hungary",
     "trackName": "Hungaroring",
-    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Hungaroring-768x432.png"
+    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Hungaroring-768x432.png",
+    "emoji": "🇭🇺"
   },
   "spa": {
     "name": "Spa",
     "country": "Belgium",
     "trackName": "Circuit de Spa-Francorchamps",
-    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Circuit-de-Spa-Francorchamps-768x432.png"
+    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Circuit-de-Spa-Francorchamps-768x432.png",
+    "emoji": "🇧🇪"
   },
   "zandvoort": {
     "name": "Zandvoort",
     "country": "Netherlands",
     "trackName": "Circuit Zandvoort",
-    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Circuit-Zandvoort-768x432.png"
+    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Circuit-Zandvoort-768x432.png",
+    "emoji": "🇳🇱"
   },
   "monza": {
     "name": "Monza",
     "country": "Italy",
     "trackName": "Autodromo Nazionale Monza",
-    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Autodromo-Nazionale-Monza-768x432.png"
+    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Autodromo-Nazionale-Monza-768x432.png",
+    "emoji": "🇮🇹"
   },
   "singapore": {
     "name": "Singapore",
     "country": "Singapore",
     "trackName": "Marina Bay Street Circuit",
-    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Marina-Bay-Street-Circuit-768x432.png"
+    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Marina-Bay-Street-Circuit-768x432.png",
+    "emoji": "🇸🇬"
   },
   "suzuka": {
     "name": "Suzuka",
     "country": "Japan",
     "trackName": "Suzuka Racing Course",
-    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Suzuka-International-Racing-Course--768x432.png"
+    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Suzuka-International-Racing-Course--768x432.png",
+    "emoji": "🇯🇵"
   },
   "qatar": {
     "name": "Qatar",
     "country": "Qatar",
     "trackName": "Losail International Circuit",
-    "url": "https://www.sportmonks.com/wp-content/uploads/2023/03/GP-Qatar-768x432.png"
+    "url": "https://www.sportmonks.com/wp-content/uploads/2023/03/GP-Qatar-768x432.png",
+    "emoji": "🇶🇦"
   },
   "texas": {
     "name": "Texas",
     "country": "USA",
     "trackName": "Circuit of the Americas",
-    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Circuit-of-The-Americas-768x432.png"
+    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Circuit-of-The-Americas-768x432.png",
+    "emoji": "🇺🇸"
   },
   "mexico": {
     "name": "Mexico",
     "country": "Mexico",
     "trackName": "Autodromo Hermanos Rodriguez",
-    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Auto%CC%81dromo-Hermanos-Rodri%CC%81guez--768x432.png"
+    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Auto%CC%81dromo-Hermanos-Rodri%CC%81guez--768x432.png",
+    "emoji": "🇲🇽"
   },
   "brazil": {
     "name": "Brazil",
     "country": "Brazil",
     "trackName": "Autodromo Jose Carlos Pace",
-    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Auto%CC%81dromo-Jose%CC%81-Carlos-Pace--768x432.png"
+    "url": "https://www.sportmonks.com/wp-content/uploads/2022/07/Auto%CC%81dromo-Jose%CC%81-Carlos-Pace--768x432.png",
+    "emoji": "🇧🇷"
   }
 }

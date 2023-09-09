@@ -3,6 +3,7 @@ export interface Track {
   url: string;
   trackName: string;
   country: string;
+  emoji?: string;
 }
 
 export type TrackName =

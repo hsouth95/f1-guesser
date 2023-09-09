@@ -11,8 +11,13 @@ import { Image } from "expo-image";
 export default function GuesserScreen() {
   const [guessCount, setGuessCount] = useState(0);
   const [selectedTrack, setSelectedTrack] = useState<string | null>(null);
-  const { randomTrack, getAllTrackNames, removeTrack, resetTracks } =
-    useTracks();
+  const {
+    randomTrack,
+    getAllTrackNames,
+    removeTrack,
+    resetTracks,
+    getTrackByName,
+  } = useTracks();
   const dropdownRef = useRef<SelectDropdown>(null);
 
   const trackName = randomTrack.name;
@@ -35,6 +40,9 @@ export default function GuesserScreen() {
               uri: randomTrack.url,
             }}
           />
+          <Text style={styles.disclaimerText}>
+            Images taken from Sportmonks
+          </Text>
         </View>
         <View style={styles.valueContainer}>
           <SelectDropdown
@@ -46,6 +54,9 @@ export default function GuesserScreen() {
             }}
             buttonTextAfterSelection={(selectedItem) => {
               return selectedItem;
+            }}
+            rowTextForSelection={(item) => {
+              return `${getTrackByName(item).emoji} ${item}`;
             }}
           />
         </View>
@@ -118,7 +129,7 @@ const styles = StyleSheet.create({
   },
   trackContainer: {
     flex: 2,
-    // padding: 8,
+    marginBottom: 16,
   },
   valueContainer: {
     flex: 1,
@@ -134,5 +145,10 @@ const styles = StyleSheet.create({
   },
   guessButtonText: {
     fontSize: 20,
+  },
+  disclaimerText: {
+    fontSize: 12,
+    fontStyle: "italic",
+    textAlign: "center",
   },
 });
