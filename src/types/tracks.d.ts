@@ -4,7 +4,7 @@ export interface Track {
 }
 
 export type TrackName =
-  | "Silverstone"
+  | "England"
   | "France"
   | "Abu Dhabi"
   | "Monaco"
