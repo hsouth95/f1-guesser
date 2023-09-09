@@ -6,6 +6,9 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "experiments": {
+      "tsconfigPaths": true
+    },
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -22,6 +25,9 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       }
+    },
+    "packagerOpts": {
+      "config": "metro.config.js"
     },
     "web": {
       "favicon": "./assets/favicon.png"
