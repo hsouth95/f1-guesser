@@ -102,7 +102,7 @@ export default function GuesserScreen() {
                   ]);
                 }
               } else {
-                alert("Incorrect!");
+                Alert.alert("Incorrect!");
               }
             }}
           >
