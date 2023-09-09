@@ -18,7 +18,11 @@ export const useTracks = () => {
   }, [remainingTracks]);
 
   const getAllTrackNames = (): TrackName[] => {
-    return Object.values(trackData) as TrackName[];
+    return Object.values(trackData).sort((a, b) => {
+      if (a < b) return -1;
+      if (b < a) return 1;
+      return 0;
+    }) as TrackName[];
   };
 
   const removeTrack = (trackName: TrackName) => {
