@@ -27,46 +27,46 @@ interface TrackLogoProps {
 export const TrackLogo = ({ trackName }: TrackLogoProps) => {
   switch (trackName) {
     case "France":
-      return <France height={100} width={100} />;
+      return <France height={200} width={200} />;
     case "Silverstone":
-      return <GreatBritain height={100} width={100} />;
+      return <GreatBritain height={200} width={200} />;
     case "Abu Dhabi":
-      return <AbuDhabi height={100} width={100} />;
+      return <AbuDhabi height={200} width={200} />;
     case "Austria":
-      return <Austria height={100} width={100} />;
+      return <Austria height={200} width={200} />;
     case "Azerbaijan":
-      return <Azerbaijan height={100} width={100} />;
+      return <Azerbaijan height={200} width={200} />;
     case "Bahrain":
-      return <Bahrain height={100} width={100} />;
+      return <Bahrain height={200} width={200} />;
     case "Belgium":
-      return <Belgium height={100} width={100} />;
+      return <Belgium height={200} width={200} />;
     case "Brazil":
-      return <Brazil height={100} width={100} />;
+      return <Brazil height={200} width={200} />;
     case "Canada":
-      return <Canada height={100} width={100} />;
+      return <Canada height={200} width={200} />;
     case "China":
-      return <China height={100} width={100} />;
+      return <China height={200} width={200} />;
     case "Hungary":
-      return <Hungary height={100} width={100} />;
+      return <Hungary height={200} width={200} />;
     case "Italy":
-      return <Italy height={100} width={100} />;
+      return <Italy height={200} width={200} />;
     case "Japan":
-      return <Japan height={100} width={100} />;
+      return <Japan height={200} width={200} />;
     case "Mexico":
-      return <Mexico height={100} width={100} />;
+      return <Mexico height={200} width={200} />;
     case "Monaco":
-      return <Monaco height={100} width={100} />;
+      return <Monaco height={200} width={200} />;
     case "Netherlands":
-      return <Netherlands height={100} width={100} />;
+      return <Netherlands height={200} width={200} />;
     case "Russia":
-      return <Russia height={100} width={100} />;
+      return <Russia height={200} width={200} />;
     case "Singapore":
-      return <Singapore height={100} width={100} />;
+      return <Singapore height={200} width={200} />;
     case "Spain":
-      return <Spain height={100} width={100} />;
+      return <Spain height={200} width={200} />;
     case "USA":
-      return <UnitedStates height={100} width={100} />;
+      return <UnitedStates height={200} width={200} />;
     default:
-      return <France height={100} width={100} />;
+      return <France height={200} width={200} />;
   }
 };
