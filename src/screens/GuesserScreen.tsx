@@ -3,7 +3,6 @@ import SelectDropdown from "react-native-select-dropdown";
 import { useRef, useState } from "react";
 
 import { useTracks } from "@/hooks/useTracks";
-import { TrackLogo } from "@/components/TrackLogo";
 import { TrackName } from "@/types/tracks";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Image } from "expo-image";
