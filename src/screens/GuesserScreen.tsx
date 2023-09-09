@@ -1,17 +1,20 @@
 import { View, Text, StyleSheet } from "react-native";
 
-import France from "logos/france.svg";
 import { useTracks } from "@/hooks/useTracks";
 import { TrackLogo } from "@/components/TrackLogo";
 
 export default function GuesserScreen() {
   const { getRandomTrack } = useTracks();
 
+  const trackName = getRandomTrack().name;
+
+  console.log(trackName);
+
   return (
     <View style={styles.container}>
       <Text style={styles.header}>Track Guesser</Text>
       <View style={styles.trackContainer}>
-        <TrackLogo trackName={getRandomTrack().name} />
+        <TrackLogo trackName={trackName} />
       </View>
     </View>
   );
