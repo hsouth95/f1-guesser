@@ -4,7 +4,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "logos": ["logos/*"]
+      "logos": ["logos/*"],
+      "assets": ["assets/*"]
     },
     "resolveJsonModule": true,
     "esModuleInterop": true

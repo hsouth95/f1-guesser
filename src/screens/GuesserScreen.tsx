@@ -6,10 +6,11 @@ import { useTracks } from "@/hooks/useTracks";
 import { TrackLogo } from "@/components/TrackLogo";
 import { TrackName } from "@/types/tracks";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { Image } from "expo-image";
 
 export default function GuesserScreen() {
   const [guessCount, setGuessCount] = useState(0);
-  const [selectedTrack, setSelectedTrack] = useState<TrackName | null>(null);
+  const [selectedTrack, setSelectedTrack] = useState<string | null>(null);
   const { randomTrack, getAllTrackNames, removeTrack, resetTracks } =
     useTracks();
   const dropdownRef = useRef<SelectDropdown>(null);
@@ -24,7 +25,16 @@ export default function GuesserScreen() {
           <Text>Guessed: {guessCount} times</Text>
         </View>
         <View style={styles.trackContainer}>
-          <TrackLogo trackName={trackName} />
+          {/* <TrackLogo trackName={trackName} />
+           */}
+          <Image
+            style={{ width: "100%", height: "100%" }}
+            contentFit="contain"
+            transition={700}
+            source={{
+              uri: randomTrack.url,
+            }}
+          />
         </View>
         <View style={styles.valueContainer}>
           <SelectDropdown
@@ -108,7 +118,7 @@ const styles = StyleSheet.create({
   },
   trackContainer: {
     flex: 2,
-    padding: 8,
+    // padding: 8,
   },
   valueContainer: {
     flex: 1,

@@ -1,6 +1,8 @@
 export interface Track {
-  name: TrackName;
-  fileName: TrackFileName;
+  name: string;
+  url: string;
+  trackName: string;
+  country: string;
 }
 
 export type TrackName =

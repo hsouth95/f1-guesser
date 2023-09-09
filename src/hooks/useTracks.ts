@@ -1,38 +1,38 @@
 import { Track, TrackFileName, TrackName } from "@/types/tracks";
-import trackData from "../../tracks.json";
+import trackData from "../../tracks.new.json";
 import { useMemo, useState } from "react";
 
 export const useTracks = () => {
-  const [remainingTracks, setRemainingTracks] = useState<TrackName[]>(
-    Object.values(trackData) as TrackName[]
+  const [remainingTracks, setRemainingTracks] = useState<Track[]>(
+    Object.values(trackData) as Track[]
   );
   const randomTrack = useMemo((): Track => {
     const keys = Object.keys(remainingTracks);
 
     const randomKey = (keys.length * Math.random()) << 0;
 
-    return {
-      fileName: keys[randomKey] as TrackFileName,
-      name: remainingTracks[keys[randomKey]] as TrackName,
-    };
+    return remainingTracks[randomKey];
   }, [remainingTracks]);
 
-  const getAllTrackNames = (): TrackName[] => {
-    return Object.values(trackData).sort((a, b) => {
-      if (a < b) return -1;
-      if (b < a) return 1;
-      return 0;
-    }) as TrackName[];
+  const getAllTrackNames = (): string[] => {
+    // Alphabetically sort the track names
+    return Object.values(trackData)
+      .map((track) => track.name)
+      .sort((a, b) => {
+        if (a < b) return -1;
+        if (b < a) return 1;
+        return 0;
+      }) as string[];
   };
 
-  const removeTrack = (trackName: TrackName) => {
+  const removeTrack = (trackName: string) => {
     setRemainingTracks((remainingTracks) =>
-      remainingTracks.filter((track) => track !== trackName)
+      remainingTracks.filter((track) => track.name !== trackName)
     );
   };
 
   const resetTracks = () => {
-    setRemainingTracks(Object.values(trackData) as TrackName[]);
+    setRemainingTracks(Object.values(trackData) as Track[]);
   };
 
   return {
