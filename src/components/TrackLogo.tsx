@@ -19,6 +19,7 @@ import Russia from "logos/russia.svg";
 import Singapore from "logos/singapore.svg";
 import Spain from "logos/spain.svg";
 import UnitedStates from "logos/usa.svg";
+import Australia from "logos/australia.svg";
 
 interface TrackLogoProps {
   trackName: TrackName;
@@ -32,6 +33,8 @@ export const TrackLogo = ({ trackName }: TrackLogoProps) => {
       return <GreatBritain height={200} width={200} />;
     case "Abu Dhabi":
       return <AbuDhabi height={200} width={200} />;
+    case "Australia":
+      return <Australia height={200} width={200} />;
     case "Austria":
       return <Austria height={200} width={200} />;
     case "Azerbaijan":

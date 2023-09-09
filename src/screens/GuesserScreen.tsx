@@ -1,9 +1,9 @@
 import { View, Text, StyleSheet, TouchableOpacity, Alert } from "react-native";
+import SelectDropdown from "react-native-select-dropdown";
+import { useRef, useState } from "react";
 
 import { useTracks } from "@/hooks/useTracks";
 import { TrackLogo } from "@/components/TrackLogo";
-import SelectDropdown from "react-native-select-dropdown";
-import { useRef, useState } from "react";
 import { TrackName } from "@/types/tracks";
 
 export default function GuesserScreen() {
@@ -60,17 +60,18 @@ export default function GuesserScreen() {
                     },
                   ]
                 );
-              }
-              Alert.alert("Correct!", "Nice one!", [
-                {
-                  text: "Next Track",
-                  onPress: () => {
-                    setGuessCount(guessCount + 1);
-                    removeTrack(trackName);
-                    dropdownRef.current?.reset();
+              } else {
+                Alert.alert("Correct!", "Nice one!", [
+                  {
+                    text: "Next Track",
+                    onPress: () => {
+                      setGuessCount(guessCount + 1);
+                      removeTrack(trackName);
+                      dropdownRef.current?.reset();
+                    },
                   },
-                },
-              ]);
+                ]);
+              }
             } else {
               alert("Incorrect!");
             }

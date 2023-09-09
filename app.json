@@ -18,19 +18,27 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.hsouth.f1guesser"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.hsouth.f1guesser"
     },
     "packagerOpts": {
       "config": "metro.config.js"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "f5dbb3d8-2269-44bd-8035-83673e3ff143"
+      }
+    },
+    "owner": "hsouth"
   }
 }
