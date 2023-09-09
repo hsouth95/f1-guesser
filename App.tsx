@@ -8,7 +8,7 @@ export default function App() {
     <SafeAreaView
       style={{
         paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-        paddingHorizontal: 16,
+        // paddingHorizontal: 16,
         flex: 1,
       }}
     >
