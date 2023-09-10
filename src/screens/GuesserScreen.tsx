@@ -3,7 +3,6 @@ import SelectDropdown from "react-native-select-dropdown";
 import { useRef, useState } from "react";
 
 import { useTracks } from "@/hooks/useTracks";
-import { TrackName } from "@/types/tracks";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Image } from "expo-image";
 
@@ -29,8 +28,6 @@ export default function GuesserScreen() {
           <Text>Guessed: {guessCount} times</Text>
         </View>
         <View style={styles.trackContainer}>
-          {/* <TrackLogo trackName={trackName} />
-           */}
           <Image
             style={{ width: "100%", height: "100%" }}
             contentFit="contain"
@@ -49,7 +46,7 @@ export default function GuesserScreen() {
             ref={dropdownRef}
             defaultButtonText="Select a track"
             onSelect={(selectedItem) => {
-              setSelectedTrack(selectedItem as TrackName);
+              setSelectedTrack(selectedItem);
             }}
             buttonTextAfterSelection={(selectedItem) => {
               return selectedItem;

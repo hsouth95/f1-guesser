@@ -26,7 +26,8 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.hsouth.f1guesser"
+      "package": "com.hsouth.f1guesser",
+      "versionCode": 1
     },
     "packagerOpts": {
       "config": "metro.config.js"
