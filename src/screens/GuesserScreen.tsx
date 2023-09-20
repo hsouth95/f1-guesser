@@ -9,6 +9,7 @@ import { Image } from "expo-image";
 export default function GuesserScreen() {
   const [guessCount, setGuessCount] = useState(0);
   const [failedGuessCount, setFailedGuessCount] = useState(0);
+  const [successfulGuesses, setSuccessfulGuesses] = useState(0);
   const [selectedTrack, setSelectedTrack] = useState<string | null>(null);
   const {
     randomTrack,
@@ -22,6 +23,7 @@ export default function GuesserScreen() {
   const trackName = randomTrack.name;
 
   const nextTrack = () => {
+    setGuessCount(guessCount + 1);
     setFailedGuessCount(0);
     removeTrack(trackName);
     setSelectedTrack(null);
@@ -33,10 +35,8 @@ export default function GuesserScreen() {
       <View style={styles.container}>
         <View style={styles.headerContainer}>
           <Text style={styles.header}>F1 Track Guesser</Text>
-          <Text>{`Track ${guessCount + 1} of ${
-            getAllTrackNames().length
-          }`}</Text>
-          <Text>Successful guesses: {guessCount}</Text>
+          <Text>{`Track ${guessCount + 1} of ${getAllTrackNames.length}`}</Text>
+          <Text>Successful guesses: {successfulGuesses}</Text>
         </View>
         <View style={styles.trackContainer}>
           <Image
@@ -53,7 +53,7 @@ export default function GuesserScreen() {
         </View>
         <View style={styles.valueContainer}>
           <SelectDropdown
-            data={getAllTrackNames()}
+            data={getAllTrackNames}
             ref={dropdownRef}
             defaultButtonText="Select a track"
             onSelect={(selectedItem) => {
@@ -78,7 +78,7 @@ export default function GuesserScreen() {
             onPress={() => {
               if (selectedTrack === trackName) {
                 // Check if we're on the last track
-                if (guessCount + 1 === getAllTrackNames().length) {
+                if (guessCount + 1 === getAllTrackNames.length) {
                   Alert.alert(
                     "You win!",
                     "Well done on guessing all the tracks. Want to start again?",
@@ -89,7 +89,11 @@ export default function GuesserScreen() {
                           console.log("Win reset");
                           resetTracks();
                           setGuessCount(0);
-                          nextTrack();
+                          setFailedGuessCount(0);
+
+                          removeTrack(trackName);
+                          setSelectedTrack(null);
+                          dropdownRef.current?.reset();
                         },
                       },
                     ]
@@ -99,7 +103,7 @@ export default function GuesserScreen() {
                     {
                       text: "Next Track",
                       onPress: () => {
-                        setGuessCount(guessCount + 1);
+                        setSuccessfulGuesses(successfulGuesses + 1);
                         nextTrack();
                       },
                     },

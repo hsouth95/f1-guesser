@@ -14,18 +14,15 @@ export const useTracks = () => {
     return remainingTracks[randomKey];
   }, [remainingTracks]);
 
-  const getAllTrackNames = (): string[] => {
-    // Alphabetically sort the track names
-    return useMemo(() => {
-      return Object.values(trackData)
-        .map((track) => track.name)
-        .sort((a, b) => {
-          if (a < b) return -1;
-          if (b < a) return 1;
-          return 0;
-        }) as string[];
-    }, [trackData]);
-  };
+  const getAllTrackNames = useMemo(() => {
+    return Object.values(trackData)
+      .map((track) => track.name)
+      .sort((a, b) => {
+        if (a < b) return -1;
+        if (b < a) return 1;
+        return 0;
+      }) as string[];
+  }, [trackData]);
 
   const removeTrack = (trackName: string) => {
     setRemainingTracks((remainingTracks) =>
