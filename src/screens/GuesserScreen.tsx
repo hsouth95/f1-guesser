@@ -8,6 +8,7 @@ import { Image } from "expo-image";
 
 export default function GuesserScreen() {
   const [guessCount, setGuessCount] = useState(0);
+  const [failedGuessCount, setFailedGuessCount] = useState(0);
   const [selectedTrack, setSelectedTrack] = useState<string | null>(null);
   const {
     randomTrack,
@@ -20,12 +21,22 @@ export default function GuesserScreen() {
 
   const trackName = randomTrack.name;
 
+  const nextTrack = () => {
+    setFailedGuessCount(0);
+    removeTrack(trackName);
+    setSelectedTrack(null);
+    dropdownRef.current?.reset();
+  };
+
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
         <View style={styles.headerContainer}>
           <Text style={styles.header}>F1 Track Guesser</Text>
-          <Text>Guessed: {guessCount} times</Text>
+          <Text>{`Track ${guessCount + 1} of ${
+            getAllTrackNames().length
+          }`}</Text>
+          <Text>Successful guesses: {guessCount}</Text>
         </View>
         <View style={styles.trackContainer}>
           <Image
@@ -70,35 +81,65 @@ export default function GuesserScreen() {
                 if (guessCount + 1 === getAllTrackNames().length) {
                   Alert.alert(
                     "You win!",
-                    "You've guessed all the tracks! Want to start again?",
+                    "Well done on guessing all the tracks. Want to start again?",
                     [
                       {
                         text: "Ok",
                         onPress: () => {
-                          console.log("Reset");
+                          console.log("Win reset");
                           resetTracks();
                           setGuessCount(0);
-                          setSelectedTrack(null);
-                          dropdownRef.current?.reset();
+                          nextTrack();
                         },
                       },
                     ]
                   );
                 } else {
-                  Alert.alert("Correct!", "Nice one!", [
+                  Alert.alert("Correct", "Nice one!", [
                     {
                       text: "Next Track",
                       onPress: () => {
                         setGuessCount(guessCount + 1);
-                        removeTrack(trackName);
-                        setSelectedTrack(null);
-                        dropdownRef.current?.reset();
+                        nextTrack();
                       },
                     },
                   ]);
                 }
               } else {
-                Alert.alert("Incorrect!");
+                if (failedGuessCount + 1 >= 3) {
+                  Alert.alert(
+                    "Need to skip?",
+                    "You've guessed wrong more than 3 times. Want to skip this track?",
+                    [
+                      {
+                        text: "Skip",
+                        onPress: () => {
+                          console.log("Skip reset");
+                          nextTrack();
+                        },
+                      },
+                      {
+                        text: "Guess again",
+                        onPress: () => {
+                          setFailedGuessCount(failedGuessCount + 1);
+                        },
+                      },
+                    ]
+                  );
+                } else {
+                  Alert.alert(
+                    "Incorrect",
+                    `You've guessed wrong ${failedGuessCount + 1} time(s).`,
+                    [
+                      {
+                        text: "Guess again",
+                        onPress: () => {
+                          setFailedGuessCount(failedGuessCount + 1);
+                        },
+                      },
+                    ]
+                  );
+                }
               }
             }}
           >
