@@ -40,6 +40,12 @@
         "projectId": "f5dbb3d8-2269-44bd-8035-83673e3ff143"
       }
     },
-    "owner": "hsouth"
+    "owner": "hsouth",
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/f5dbb3d8-2269-44bd-8035-83673e3ff143"
+    }
   }
 }
